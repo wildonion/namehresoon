@@ -27,3 +27,5 @@ dotnet ef migrations add InitialCreate
 dotnet ef database update
 dotnet tool install --global dotnet-ef
 ```
+
+> ensure that you've already setup the `DOCKER_USERNAME`, `DOCKER_PASSWORD`, `SERVER_HOST`, `SERVER_PASSWORD`, `SERVER_USER` secret vars.
