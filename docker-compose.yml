@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  mail-service:
+    container_name: mail-service
+    image: docker.sprun.ir/mail-service
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    restart: unless-stopped
+    ports:
+      - "5064:8080"
+    networks:
+      - fms-services_db
+      - fms-services_gw
+
+networks:
+  fms-services_db:
+  fms-services_gw:
